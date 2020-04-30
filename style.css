@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background: #07001f;
+  color: white;
+}
+
+header {
+  border-bottom: 1px solid #6b1cff;
+  padding: 30px;
+  background-color: #280074;
+}
+
+header div {
+  text-align: center;
+}
+
+.links a {
+  font-size: 18px;
+  margin: 0 30px;
+  line-height: 28px;
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: 1px solid ;
+}
+
+.links a:hover {
+  color: #48ff00;
+  transition: 300ms;
+}
+
+#wrapper {
+  text-align: center;
+  margin: 32px;
+}
+
+#wrapper img {
+  border-radius: 50%;
+  border: 5px solid #135300;
+  height: 250px;
+}
+
+#wrapper h1 {
+  margin-top: 8px;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 58px;
+}
+
+#wrapper h2 {
+  margin-top: 8px;
+  font-size: 36x;
+  font-weight: 400;
+  line-height: 46px;
+}
+
+#wrapper h3 {
+  margin-top: 8px;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 34px;
+}
+
+#wrapper li {
+  margin: 8px auto;
+  max-width: 100px;
+  text-align: center;
+}
+
+#links-footer {
+  margin-top: 20px;
+}
+
+/* --- courses --- */
+
+.courses {
+  max-width: 800px;
+  margin: 20px auto 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.course {
+  background-color: #13064d;
+}
+
+.course:hover {
+  background-color: #0a0035;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.course__logo { 
+  color: #6b1cff;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center; 
+}
+
+.course__title,
+.course__info {
+  color: white;
+
+  padding: 24px;
+}
+
+.course__info {
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.course__modules {
+  background-color: #6b1cff;
+  filter: brightness(90%);
+  padding: 5px 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* ---- MODAL ---- */
+
+.modal-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 60%;
+  height: 80%;
+  position: fixed;
+  left: 20%;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal {
+  background-color: white;
+  width: 90%;
+  height: 90%;
+  margin: 5vh auto;
+  position: relative;
+}
+
+.modal .actions-modal {
+  color: black;
+  position: absolute;
+  right: 8px;
+  cursor: pointer;
+}
+
+#maximize-modal {
+  right: 32px;
+}
+
+
+
+/*====MODAL.ACTIVE====*/
+.modal-overlay.active{
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-overlay.active.maximized {
+  width: 100%;
+  height: 100%;
+  left: 0;
+}
+
+iframe {
+  width: 100%;
+  height: 90%;
+  position: absolute;
+  top: 5%;
+}
