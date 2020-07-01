@@ -1,24 +1,10 @@
-<!DOCTYPE html>
-<html>
+{% extends "layout.njk" %}
 
-<head>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+{% block head %}
+<title>Cursos - Kallel Roman</title>
+{% endblock%}
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-</head>
-
-<body>
-  <header>
-    <div class="links">
-      <a href="https://discordapp.com/invite/gCRAFhc">Comunidade</a>
-      <a href="mailto:oi@rocketseat.com.br">Email</a>
-      <a href="tel:+5547992078767">Telefone</a>
-      <a href="/">Início</a>
-      <a href="/sobre.html">Sobre</a>
-    </div>
-  </header>
-
+{% block content %}
   <section class="courses">
     <div class="course" id="starter">
       <div class="course__logo">
@@ -78,6 +64,4 @@
 
   <script src="script.js"></script>
 
-</body>
-
-</html>
+{% endblock %}
