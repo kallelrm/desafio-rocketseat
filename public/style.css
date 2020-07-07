@@ -90,6 +90,7 @@ header div {
 
 .course {
   background-color: #13064d;
+  display: grid;
 }
 
 .course:hover {
@@ -116,6 +117,7 @@ header div {
   color: white;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  align-items: center;
 }
 
 .course__modules {

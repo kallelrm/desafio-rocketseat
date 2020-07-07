@@ -6,20 +6,20 @@
 
 {% block content %}
   <div id="wrapper">
-    <img src="logo.png" alt="Logo">
-    <h1>COMPANHIA</h1>
-    <h2>Aqui para facilitar sua vida</h2>
+    <img src="{{ about.logo }}" alt="Logo">
+    <h1>{{ about.name }}</h1>
+    <h2>{{ about.description }}</h2>
     <h3>Tecnologias</h3> 
     <ul>
-      <li>Node.js</li>
-      <li>React</li>
-      <li>React Native</li>
+      {% for tech in about.techs %}
+        <li>{{ tech }}</li>
+      {% endfor %}
     </ul>
 
     <div id="links-footer" class="links">
-      <a href="https://github.com/" target="_blank">Github</a>
-      <a href="https://instagram.com/" target="_blank">Instagram</a>
-      <a href="https://facebook.com" target="_blank">Facebook</a>
+      {% for link in about.links %}
+        <a href="{{ link.url }}" target="_blank">{{ link.name }}</a>
+      {% endfor %}
     </div>
   </div>
 

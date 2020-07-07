@@ -1,49 +1,26 @@
 {% extends "layout.njk" %}
 
 {% block head %}
-<title>Cursos - Kallel Roman</title>
+  <title>Cursos - Kallel Roman</title>
 {% endblock%}
 
 {% block content %}
   <section class="courses">
-    <div class="course" id="starter">
-      <div class="course__logo">
-        <img src="https://skylab.rocketseat.com.br/static/64c237ccff807c054339a62d53b4b402.svg" alt="logo">
-      </div>
-      <div class="course__title">
-        <h1>Starter</h1>
-      </div>
-      <div class="course__info">
-        <p>Gratuito</p>
-        <p class="course__modules">6 módulos</p>
-      </div>
-    </div>
 
-    <div class="course" id="launchbase">
-      <div class="course__logo">
-        <img src="https://skylab.rocketseat.com.br/static/0828532024cb46921a6b5e941f8d788d.svg" alt="logo">
+    {% for course in courses %}
+      <div class="course" id="{{ course.id }}">
+        <div class="course__logo">
+          <img src="{{ course.logo }}" alt="Logo do curso {{ course.title }}">
+        </div>
+        <div class="course__title">
+          <h1>{{ course.title }}</h1>
+        </div>
+        <div class="course__info">
+          <p>{{ course.price }}</p>
+          <p class="course__modules">{{ course.modules }}</p>
+        </div>
       </div>
-      <div class="course__title">
-        <h1>Launchbase</h1>
-      </div>
-      <div class="course__info">
-        <p>Pago</p>
-        <p class="course__modules">11 módulos</p>
-      </div>
-    </div>
-
-    <div class="course" id="gostack">
-      <div class="course__logo">
-        <img src="https://skylab.rocketseat.com.br/static/83a178a0653dab1d55e2ed7946465975.svg" alt="logo">
-      </div>
-      <div class="course__title">
-        <h1>GoStack</h1>
-      </div>
-      <div class="course__info">
-        <p>Pago</p>
-        <p class="course__modules">15 módulos</p>
-      </div>
-    </div>
+    {% endfor %}
 
   </section>
 
