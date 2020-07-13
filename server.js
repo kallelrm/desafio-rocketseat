@@ -36,10 +36,24 @@ server.get('/cursos', function(req, res){
   res.render('cursos', { courses });
 });
 
+server.get("/courses/:id", function(req, res) {
+  const id = req.params.id;
+
+  const curso = courses.find(function (curso){
+    return curso.id == id;
+  });
+
+  if (!curso) {
+    return res.render('not-found');
+  }
+
+  return res.render('curso', { course: curso });
+});
+
 server.use(function(req, res) {
   res.status(404).render('not-found');
 });
 
 server.listen(5000, function() {
-  console.log('Server is running');
+  console.log('Server is running on port 5000');
 });

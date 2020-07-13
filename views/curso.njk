@@ -1,13 +1,12 @@
 {% extends "layout.njk" %}
 
 {% block head %}
-  <title>Cursos - Kallel Roman</title>
-{% endblock%}
+  <title>{{course.title}}</title>
+  {% endblock%}
 
-{% block content %}
-  <section class="courses">
+  {% block content %}
+    <section class="courses">
 
-    {% for course in courses %}
       <div class="course" id="{{ course.id }}">
         <div class="course__logo">
           <img src="{{ course.logo }}" alt="Logo do curso {{ course.title }}">
@@ -20,10 +19,6 @@
           <p class="course__modules">{{ course.modules }}</p>
         </div>
       </div>
-    {% endfor %}
 
-  </section>
-
-  <script src="script.js"></script>
-
-{% endblock %}
+    </section>
+  {% endblock %}
