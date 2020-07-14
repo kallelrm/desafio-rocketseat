@@ -32,7 +32,7 @@ server.get('/', function (req, res){
   res.render('sobre', { about });
 });
 
-server.get('/cursos', function(req, res){
+server.get('/courses', function(req, res){
   res.render('cursos', { courses });
 });
 
